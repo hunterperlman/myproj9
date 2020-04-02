@@ -1,6 +1,40 @@
-<ul>
-  <li><a routerLinkActive="active" routerLink="/home">Home</a></li>
-  <li><a routerLinkActive="active" routerLink="/employee-set">All Employees</a></li>
-</ul>
+<router-outlet>
+<header>
+<style>
+    a { text-decoration: none; }
+  </style>
 
-<router-outlet></router-outlet>
+  <div class="parent">
+    <div class='child-left'>
+      <a routerLinkActive="active" routerLink="/home">New</a>
+    </div>
+
+    <div class='child-middle'>
+      <a routerLinkActive="active" routerLink="/employee-set">List</a>
+    </div>
+
+    <div class='child-right'>
+      <a routerLinkActive="active" routerLink="/employee-search">Search</a>
+    </div>
+
+  </div>
+</header>
+
+
+</router-outlet>
+
+
+<!--
+<header>
+<div class="container">
+<ul>
+  <li><a routerLinkActive="active" routerLink="/home">New</a></li>
+  <li><a routerLinkActive="active" routerLink="/employee-set">List</a></li>
+  <li><a routerLinkActive="active" routerLink="/employee-set">Search</a></li>
+</ul>
+</div>
+</header>
+
+<router-outlet>
+</router-outlet>
+-->
