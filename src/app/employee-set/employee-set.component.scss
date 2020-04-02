@@ -2,15 +2,13 @@
     border : 1px solid green;
     padding : 10px;
   
-    .active {
-      background-color : yellow
-    }
-  
     .odd {
-      background-color : grey
+      border : solid 1px black;
+      background-color: lightslategrey
     }
   
     .even {
+      border : solid 1px black;
       background-color : lightgrey
     }
   }

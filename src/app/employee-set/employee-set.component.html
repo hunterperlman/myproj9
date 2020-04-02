@@ -3,10 +3,6 @@
         All Current Employees
         <li *ngFor="let employee of employees; let i = index" [ngClass]="getClasses(i)">
             {{employee.username}}
-
-            <!-- Borrowed code for reference
-                <a routerLink="/employee/{{employee.username}}">{{employee.username}}</a>
-            -->
         </li>
     </ul>
 </div>
