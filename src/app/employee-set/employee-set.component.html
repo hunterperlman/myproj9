@@ -1,0 +1,7 @@
+<div class="employee-set">
+    <ul>
+        <li *ngFor="let employee of employees; let i = index" [ngClass]="getClasses(i)">
+            <a routerLink="/employee/{{employee.username}}">{{employee.username}}</a>
+        </li>
+    </ul>
+</div>
