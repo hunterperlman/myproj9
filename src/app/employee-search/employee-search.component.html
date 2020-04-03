@@ -1,1 +1,20 @@
-<p>employee-search works!</p>
+
+<input (change)="searchUser($event)" placeholder="Search" />
+
+    <ul>
+        <li *ngFor="let item of selectedUsers">
+            {{item.username}}
+        </li>
+    </ul>
+
+<!--
+<input (change)="searchUser($event)" placeholder="Search"/>
+<div class="employee-search">
+    <input ng-model="searchText" placeholder="enter search term here">
+    <ul>
+      <li ng-repeat="let item of employees; item in employees | filter : searchText">
+        {{ item }}
+      </li>
+    </ul>
+</div>
+-->

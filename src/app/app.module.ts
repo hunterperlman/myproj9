@@ -10,13 +10,15 @@ import { AppComponent } from './app.component';
 import { EmployeeAddComponent } from './employee-add/employee-add.component';
 import { EmployeeSearchComponent } from './employee-search/employee-search.component';
 import { EmployeeSetComponent } from './employee-set/employee-set.component';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeAddComponent,
     EmployeeSearchComponent,
-    EmployeeSetComponent
+    EmployeeSetComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

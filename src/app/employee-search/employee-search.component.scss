@@ -1,0 +1,14 @@
+.employee-search {
+    border : 1px solid green;
+    padding : 10px;
+  
+    .odd {
+      border : solid 1px black;
+      background-color: lightslategrey
+    }
+  
+    .even {
+      border : solid 1px black;
+      background-color : lightgrey
+    }
+  }
