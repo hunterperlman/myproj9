@@ -1,4 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { EmployeeService } from "../employee.service"
+
 
 @Component({
   selector: 'employee-search',
@@ -7,46 +9,35 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class EmployeeSearchComponent implements OnInit {
 
-  @Input("list") list : any [];
+  // makes initial list object
   selectedUsers : any[] = [];
 
-  constructor(){}
-  ngOnInit(): void {
-    //this.selectedUsers = employeeService.getEmployeeList();
-  }
+  // sets up constuctor
+  constructor(private employeeService : EmployeeService) { }
 
-  
-  
-  
-
+  // search user event
   searchUser(event)
   {
-    this.selectedUsers = this.list.filter(
+    this.selectedUsers = this.selectedUsers.filter(
       (item)=>{
       return event.target.value === item.username;
     })
-  }
-}
+  } 
 
-
-  /*
-  constructor(private employeeService : EmployeeService) { }
-  ngOnInit(): void {
-
+  ngOnInit(): void 
+  {
+    // sets up selected user object using the service
     this.selectedUsers = this.employeeService.getEmployeeList();
-
-    this.employeeService.employeeSet.subscribe((data)=>{
-      console.log("data is list component - ", data)
-      this.selectedUsers = data;
-    })
-  showInformation(employee)
+    this.employeeService.employeeSet.subscribe((data)=>
     {
-      alert(`Email : ${employee.email} Phone : ${employee.phone} `)
-    }
-
-    getClasses(index)
-      {
-        return { active : false, odd : index % 2 === 0, even : index % 2 !== 0}
-      }
+      console.log(this.selectedUsers);
+    })
   }
-  */
+
+  // returns even vs. odd
+  getClasses(index)
+  {
+    return { active : false, even : index % 2 !== 0, odd : index % 2 === 0}
+  }
+  
+}

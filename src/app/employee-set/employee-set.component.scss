@@ -1,15 +1,16 @@
 .employee-set {
     border : 1px solid green;
     padding : 10px;
-  
+
+    .even {
+      border : solid 1px black;
+      background-color : lightgrey
+    }
+    
     .odd {
       border : solid 1px black;
       background-color: lightslategrey
     }
   
-    .even {
-      border : solid 1px black;
-      background-color : lightgrey
-    }
+    
   }
-  

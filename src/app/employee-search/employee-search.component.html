@@ -1,20 +1,13 @@
+<div class="employee-search">
 
-<input (change)="searchUser($event)" placeholder="Search" />
-
-    <ul>
-        <li *ngFor="let item of selectedUsers">
-            {{item.username}}
+<input (change)="searchUser($event)" placeholder="Search By Name" />
+<br>
+<span>
+    <ul style="list-style-type: none; display: inline-block;">
+        <li *ngFor="let item of selectedUsers; let i = index" [ngClass]="getClasses(i)">
+            Name: {{item.username}}   Phone: {{item.phone}}   Email: {{item.phone}}
         </li>
     </ul>
-
-<!--
-<input (change)="searchUser($event)" placeholder="Search"/>
-<div class="employee-search">
-    <input ng-model="searchText" placeholder="enter search term here">
-    <ul>
-      <li ng-repeat="let item of employees; item in employees | filter : searchText">
-        {{ item }}
-      </li>
-    </ul>
+</span>
 </div>
--->
+

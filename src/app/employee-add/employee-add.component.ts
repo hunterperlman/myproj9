@@ -8,19 +8,21 @@ import { EmployeeService } from "../employee.service"
 })
 export class EmployeeAddComponent implements OnInit {
 
-  user: { username: string, email: string, phone: string } = {
+  user: { username: string, email: string, phone: string } = 
+  {
     username: "",
     email: "",
     phone: ""
   }
+
   //note the lower case
   constructor(private employeeService: EmployeeService) { }
 
-  ngOnInit(): void {
-  }
-
-  addUser() {
+  addUser() 
+  {
     this.employeeService.addEmployeeData(this.user);
   }
+
+  ngOnInit(): void {}
 
 }
